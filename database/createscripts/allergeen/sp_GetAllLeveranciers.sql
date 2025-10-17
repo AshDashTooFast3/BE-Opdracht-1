@@ -1,6 +1,5 @@
 DROP PROCEDURE IF EXISTS sp_GetAllLeveranciers;
 
-CALL laravel.sp_GetAllLeveranciers;
 DELIMITER $$
 
 CREATE PROCEDURE sp_GetAllLeveranciers ()

@@ -26,7 +26,8 @@ class AllergeenController extends Controller
 
         return view('allergeen.index', [
             'title' => 'Allergenen',
-            'allergenen' => $allergenen
+            'allergenen' => $allergenen,
+            'message' => 'Hier is een overzicht van alle allergenen in het systeem.'
         ]);
     }
 

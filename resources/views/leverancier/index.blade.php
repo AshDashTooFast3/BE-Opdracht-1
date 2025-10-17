@@ -8,7 +8,7 @@
     <title>{{ $title }}</title>
 </head>
 
-<body>
+<body class="mt-4">
 
     <div class="container my-5">
         <h1>{{ $title }}</h1>
@@ -26,7 +26,7 @@
                 @forelse ($leveranciers as $leverancier)
                     <tr>
                         <td>{{ $leverancier->Naam }}</td>
-                        <td>{{ $leverancier->ContactPersoon }}</td>
+                        <td>{{ $leverancier->Contactpersoon }}</td>
                         <td>{{ $leverancier->LeverancierNummer }}</td>
                         <td>{{ $leverancier->Mobiel }}</td>
                     </tr>
@@ -37,7 +37,7 @@
                 @endforelse
             </tbody>
         </table>
-        <a href="/">Terug naar home</a>
+        <a class="btn btn-primary" href="{{ route('home') }}">Terug naar het overzicht</a>
     </div>
 </body>
 </html>

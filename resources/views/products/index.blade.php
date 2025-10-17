@@ -8,7 +8,7 @@
     <title>Producten</title>
 </head>
 
-<body class="">
+<body class="mt-4">
     <div class="container d-flex justify-content-center ">
 
         <div class="col-md-10">
@@ -21,10 +21,8 @@
                     {{ session('success') }}
                     <button type="button" class="btn-close" aria-label="sluiten" data-bs-dismiss="alert"></button>
                 </div>
-                <meta http-equiv="refresh" content="3;url={{ route('product.index') }}">
+                <meta http-equiv="refresh" content="3;url={{ route('products.index') }}">
             @endif
-
-            {{-- <a href="{{ route('product.create') }}" class="btn btn-primary">Nieuw Product</a> --}}
 
             <table class="table table-hover table-striped">
                 <thead>
@@ -34,8 +32,6 @@
                     <th>AantalAanwezig</th>
                     <th>AllergenenInfo</th>
                     <th>LeverancierInfo</th>
-                    {{-- <th>Verwijder</th>
-                    <th>Bijwerken</th> --}}
                 </thead>
                 <tbody>
                     @forelse ($products as $product)
@@ -58,28 +54,13 @@
                                     </button>
                                 </a>
                             </td>
-                            <td>
-                                {{-- <form action="{{ route('product.destroy', $product->Id) }}" method="POST"
-                                    onsubmit="return confirm('Weet je zeker dat je dit product wilt verwijderen?');"></form>
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger text-center">Verwijderen</button>
-                                </form>
-                            </td>
-                            <td>
-                                <form action="{{ route('product.edit', $product->Id) }}" method="GET"
-                                    onsubmit="return confirm('Weet je zeker dat je dit product wilt bijwerken?');"></form>
-                                    @csrf
-                                    @method('PUT')
-                                    <button type="submit" class="btn btn-info text-white text-center">Bijwerken</button>
-                                </form> --}}
-                            </td>
                         </tr>
                     @empty
                         <tr colspan='3'>Geen producten bekend</tr>
                     @endforelse
                 </tbody>
             </table>
+          <a class="btn btn-primary" href="{{ route('home') }}">Terug naar het overzicht</a>
         </div>
     </div>
 </body>

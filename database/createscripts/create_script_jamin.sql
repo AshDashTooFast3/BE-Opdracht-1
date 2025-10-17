@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS Magazijn (
 INSERT INTO
     Magazijn (
         ProductId,
-        VerpakkingsEenheidInKG,
+        VerpakkingsEenheid,
         AantalAanwezig
     )
     
